@@ -27,7 +27,8 @@ Pengolahan data dilakukan menggunakan bahasa pemrograman R. Tahapan analisis mel
 ###	Menentukan Jumlah Sampel dengan Rumus Slovin
 
   	Tahap ini dilakukan untuk menentukan jumlah sampel penelitian berdasarkan jumlah populasi dan tingkat kesalahan tertentu. Perhitungan dilakukan menggunakan rumus Slovin dengan tingkat kesalahan sebesar 15%.
-    ```
+
+    ```r
     N <- 1693
     e <- 0.15
     n <- ceiling(N / (1 + N * e^2))
