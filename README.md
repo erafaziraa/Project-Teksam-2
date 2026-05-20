@@ -76,30 +76,30 @@ Berdasarkan hasil perhitungan, diperoleh jumlah sampel penelitian sebanyak 44 re
 Uji validitas instrumen penelitian dilakukan menggunakan corrected item-total correlation (r.drop) dengan kriteria pengambilan keputusan yaitu item dinyatakan valid apabila memiliki nilai r.drop ≥ 0,30. Hasil pengujian validitas setiap item pertanyaan dapat dilihat pada tabel berikut.
 | Item | r.drop | Keterangan |
 |---|---|---|
-| P1 | 0.7221 | Valid |
-| P2 | 0.6510 | Valid |
-| P3 | 0.2472 | Tidak Valid |
-| P4 | 0.1753 | Tidak Valid |
-| P5 | 0.6024 | Valid |
-| P6 | 0.3047 | Valid |
-| P7 | 0.5441 | Valid |
-| P8 | 0.7881 | Valid |
-| P9 | 0.7887 | Valid |
-| P10 | 0.7406 | Valid |
+| P1 | 0,7221 | Valid |
+| P2 | 0,6510 | Valid |
+| P3 | 0,2472 | Tidak Valid |
+| P4 | 0,1753 | Tidak Valid |
+| P5 | 0,6024 | Valid |
+| P6 | 0,3047 | Valid |
+| P7 | 0,5441 | Valid |
+| P8 | 0,7881 | Valid |
+| P9 | 0,7887 | Valid |
+| P10 | 0,7406 | Valid |
 
 Berdasarkan hasil uji validitas tersebut, dapat diketahui bahwa terdapat dua item yang tidak valid, yaitu item P3 dan P4 karena memiliki nilai r.drop < 0,30. Sementara itu, delapan item lainnya dinyatakan valid karena telah memenuhi kriteria yang ditetapkan, sehingga dapat digunakan dalam analisis selanjutnya.
 ### Eliminasi Item Tidak Valid
 Berdasarkan hasil uji validitas menggunakan corrected item-total correlation (r.drop), diketahui bahwa terdapat dua item yang tidak memenuhi kriteria validitas, yaitu P3 dan P4 karena memiliki nilai r.drop < 0,30. Dengan demikian, kedua item tersebut dinyatakan tidak valid dan dieliminasi dari instrumen penelitian agar kualitas instrumen yang digunakan dalam analisis selanjutnya menjadi lebih baik dan memenuhi kriteria pengukuran yang ditetapkan. Setelah dilakukan proses eliminasi tersebut, uji validitas kembali dilakukan menggunakan corrected item-total correlation (r.drop) dengan kriteria pengambilan keputusan bahwa item dinyatakan valid apabila memiliki nilai r.drop ≥ 0,30. Hasil pengujian validitas setelah eliminasi dapat dilihat pada tabel berikut.
 | Item | r.drop | Keterangan |
 |---|---|---|
-| P1 | 0.7745 | Valid |
-| P2 | 0.6944 | Valid |
-| P5 | 0.6399 | Valid |
-| P6 | 0.3086 | Valid |
-| P7 | 0.5037 | Valid |
-| P8 | 0.8111 | Valid |
-| P9 | 0.8324 | Valid |
-| P10 | 0.7754 | Valid |
+| P1 | 0,7745 | Valid |
+| P2 | 0,6944 | Valid |
+| P5 | 0,6399 | Valid |
+| P6 | 0,3086 | Valid |
+| P7 | 0,5037 | Valid |
+| P8 | 0,8111 | Valid |
+| P9 | 0,8324 | Valid |
+| P10 | 0,7754 | Valid |
 
 Berdasarkan hasil uji validitas setelah eliminasi, seluruh item yang tersisa yaitu P1, P2, P5, P6, P7, P8, P9, dan P10 dinyatakan valid karena memiliki nilai r.drop ≥ 0,30, sehingga seluruh item tersebut telah memenuhi kriteria validitas dan dapat digunakan untuk analisis selanjutnya.
 ### Uji Reliabilitas Instrumen Penelitian
