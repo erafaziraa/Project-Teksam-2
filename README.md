@@ -25,49 +25,47 @@ Pengolahan data dilakukan menggunakan bahasa pemrograman R. Tahapan analisis mel
 
 ## Tahap Analisis Data
 ###	Menentukan Jumlah Sampel dengan Rumus Slovin
-
-  	Tahap ini dilakukan untuk menentukan jumlah sampel penelitian berdasarkan jumlah populasi dan tingkat kesalahan tertentu. Perhitungan dilakukan menggunakan rumus Slovin dengan tingkat kesalahan sebesar 15%.
-
-    ```r
-    N <- 1693
-    e <- 0.15
-    n <- ceiling(N / (1 + N * e^2))
-    cat("Jumlah sampel berdasarkan rumus Slovin =", n)
-    ```
+Tahap ini dilakukan untuk menentukan jumlah sampel penelitian berdasarkan jumlah populasi dan tingkat kesalahan tertentu. Perhitungan dilakukan menggunakan rumus Slovin dengan tingkat kesalahan sebesar 15%.
+ ```r
+N <- 1693
+e <- 0.15
+n <- ceiling(N / (1 + N * e^2))
+cat("Jumlah sampel berdasarkan rumus Slovin =", n)
+ ```
 ###	Import Data Kuesioner
+Tahap ini dilakukan untuk memasukkan data hasil kuesioner ke dalam R. Data diimport dari file yang telah disiapkan agar dapat digunakan pada proses analisis selanjutnya.
 
-  	Tahap ini dilakukan untuk memasukkan data hasil kuesioner ke dalam R. Data diimport dari file yang telah disiapkan agar dapat digunakan pada proses analisis selanjutnya.
-    ```
-    library(readxl)
-    data_kuesioner <- read_excel("C:/Users/ACER/OneDrive/Documents/DATA TEKSAM.xlsx")
-    View(data_kuesioner)
-    ```
+```r
+library(readxl)
+data_kuesioner <- read_excel("C:/Users/ACER/OneDrive/Documents/DATA TEKSAM.xlsx")
+View(data_kuesioner)
+```
 ###	Uji Validitas Instrumen Penelitian
+Uji validitas dilakukan untuk mengetahui apakah setiap item pertanyaan pada kuesioner mampu mengukur variabel penelitian dengan baik. Pengujian dilakukan dengan melihat nilai corrected item-total correlation (r.drop) pada setiap item pertanyaan.
 
-  	Uji validitas dilakukan untuk mengetahui apakah setiap item pertanyaan pada kuesioner mampu mengukur variabel penelitian dengan baik. Pengujian dilakukan dengan melihat nilai corrected item-total correlation (r.drop) pada setiap item pertanyaan.
-    ```
-    install.packages("psych")
-    library(psych)
-    hasil <- alpha(data_kuisioner)
-    hasil
-    hasil$item.stats
-    ```
+```r
+install.packages("psych")
+library(psych)
+hasil <- alpha(data_kuisioner)
+hasil
+hasil$item.stats
+```
 ###	Eliminasi Item Tidak Valid
+Item pertanyaan yang memiliki nilai r.drop kurang dari 0,30 dinyatakan tidak valid dan dieliminasi dari instrumen penelitian agar kualitas instrumen menjadi lebih baik.
 
-  	Item pertanyaan yang memiliki nilai r.drop kurang dari 0,30 dinyatakan tidak valid dan dieliminasi dari instrumen penelitian agar kualitas instrumen menjadi lebih baik.
-  	```
-    data_baru <- subset(data_kuisioner,
+```r
+data_baru <- subset(data_kuisioner,
                     select = -c(P3, P4))
-    hasil_baru <- alpha(data_baru)
-    hasil_baru
-    hasil_baru$item.stats
-  	```
+hasil_baru <- alpha(data_baru)
+hasil_baru
+hasil_baru$item.stats
+```
 ###	Uji Reliabilitas Instrumen Penelitian
+Uji reliabilitas dilakukan untuk mengetahui tingkat konsistensi instrumen penelitian. Pengujian dilakukan menggunakan metode Cronbach’s Alpha untuk melihat apakah kuesioner reliabel atau tidak.
 
-  	Uji reliabilitas dilakukan untuk mengetahui tingkat konsistensi instrumen penelitian. Pengujian dilakukan menggunakan metode Cronbach’s Alpha untuk melihat apakah kuesioner reliabel atau tidak.
-  	```
-    hasil_baru$total$raw_alpha
-    ```
+```r
+hasil_baru$total$raw_alpha
+```
 ## Hasil dan Pembahasan
 ### Jumlah Sampel dengan Rumus Slovin
 Penentuan jumlah sampel dalam penelitian ini dilakukan menggunakan rumus Slovin dengan bantuan software R. Jumlah populasi dalam penelitian ini adalah sebanyak 1.693 mahasiswa FMIPA Universitas Mataram, dengan tingkat kesalahan (error) yang digunakan sebesar 0,15.
@@ -77,16 +75,16 @@ Berdasarkan hasil perhitungan, diperoleh jumlah sampel penelitian sebanyak 44 re
 Uji validitas instrumen penelitian dilakukan menggunakan corrected item-total correlation (r.drop) dengan kriteria pengambilan keputusan yaitu item dinyatakan valid apabila memiliki nilai r.drop ≥ 0,30. Hasil pengujian validitas setiap item pertanyaan dapat dilihat pada tabel berikut.
 | Item | r.drop | Keterangan |
 |---|---|---|
-| P1 | 0,7221 | Valid |
-| P2 | 0,6510 | Valid |
-| P3 | 0,2472 | Tidak Valid |
-| P4 | 0,1753 | Tidak Valid |
-| P5 | 0,6024 | Valid |
-| P6 | 0,3047 | Valid |
-| P7 | 0,5441 | Valid |
-| P8 | 0,7881 | Valid |
-| P9 | 0,7887 | Valid |
-| P10 | 0,7406 | Valid |
+| P1 | 0,67 | Valid |
+| P2 | 0,64 | Valid |
+| P3 | 0,30 | Valid |
+| P4 | 0,30 | Valid |
+| P5 | 0,59 | Valid |
+| P6 | 0,31 | Valid |
+| P7 | 0,53 | Valid |
+| P8 | 0,75 | Valid |
+| P9 | 0,70 | Valid |
+| P10 | 0,78 | Valid |
 
 Berdasarkan hasil uji validitas tersebut, dapat diketahui bahwa terdapat dua item yang tidak valid, yaitu item P3 dan P4 karena memiliki nilai r.drop < 0,30. Sementara itu, delapan item lainnya dinyatakan valid karena telah memenuhi kriteria yang ditetapkan, sehingga dapat digunakan dalam analisis selanjutnya.
 ### Eliminasi Item Tidak Valid
@@ -108,7 +106,7 @@ Uji reliabilitas instrumen penelitian dilakukan untuk mengetahui tingkat konsist
 
 Uji reliabilitas dilakukan setelah proses eliminasi item tidak valid, sehingga hanya item yang telah memenuhi kriteria validitas yang digunakan dalam pengujian ini. Hal ini dilakukan agar hasil reliabilitas yang diperoleh mencerminkan kualitas instrumen penelitian secara lebih akurat.
 
-Berdasarkan hasil pengujian, diperoleh nilai Cronbach’s Alpha sebesar 0,884732. Nilai tersebut menunjukkan bahwa instrumen penelitian memiliki tingkat reliabilitas yang sangat baik, sehingga dapat disimpulkan bahwa instrumen yang digunakan bersifat konsisten dan dapat dipercaya untuk digunakan dalam analisis selanjutnya.
+Berdasarkan hasil pengujian, diperoleh nilai Cronbach’s Alpha sebesar 0,8458203. Nilai tersebut menunjukkan bahwa instrumen penelitian memiliki tingkat reliabilitas yang sangat baik, sehingga dapat disimpulkan bahwa instrumen yang digunakan bersifat konsisten dan dapat dipercaya untuk digunakan dalam analisis selanjutnya.
 
 ## Kesimpulan
 Hasil penentuan jumlah sampel menggunakan rumus Slovin, dengan jumlah populasi sebanyak 1.693 dan tingkat kesalahan sebesar 0,15, diperoleh jumlah sampel penelitian sebanyak 44 responden. Jumlah tersebut kemudian digunakan sebagai dasar pengumpulan data dalam penelitian ini.
