@@ -9,17 +9,16 @@ Di lingkungan FMIPA Universitas Mataram, penggunaan layanan keuangan digital jug
 Penelitian ini bertujuan untuk mengetahui tingkat kepuasan mahasiswa FMIPA Universitas Mataram terhadap penggunaan layanan keuangan digital, khususnya E-Wallet dan Mobile Banking. Selain itu, penelitian ini juga memberikan gambaran mengenai peran layanan tersebut dalam mendukung kebutuhan harian mahasiswa. Data diperoleh melalui survei daring dengan teknik non probability sampling dengan metode purposive sampling, sehingga hasil penelitian diharapkan mampu memberikan informasi deskriptif terkait perilaku serta tingkat kepuasan pengguna layanan keuangan digital di lingkungan mahasiswa FMIPA Universitas Mataram.
 
 ## Tujuan
-1.	Mengetahui tingkat kepuasan mahasiswa FMIPA Universitas Mataram terhadap penggunaan layanan keuangan digital. 
-2.	Mengetahui peran E-Wallet dan Mobile Banking dalam mendukung kebutuhan sehari-hari mahasiswa. 
-3.	Menentukan jumlah sampel penelitian menggunakan rumus Slovin. 
-4.	Menguji validitas dan reliabilitas instrumen kuisioner yang digunakan dalam penelitian. 
+1.	Mengetahui tingkat kepuasan mahasiswa FMIPA Universitas Mataram terhadap penggunaan layanan keuangan digital.  
+2.	Menentukan jumlah sampel penelitian menggunakan rumus Slovin. 
+3.	Menguji validitas dan reliabilitas instrumen kuisioner yang digunakan dalam penelitian.
 
 ## Metode
 Penelitian ini merupakan penelitian kuantitatif dengan pendekatan survei online. Data diperoleh melalui penyebaran kuesioner menggunakan Google Form kepada mahasiswa FMIPA Universitas Mataram mengenai penggunaan layanan keuangan digital, seperti E-Wallet dan Mobile Banking.
 
 Teknik sampling yang digunakan adalah non probability sampling dengan metode convenience sampling, yaitu pengambilan sampel berdasarkan kemudahan dalam memperoleh responden. Penentuan jumlah sampel dilakukan menggunakan rumus Slovin dengan tingkat kesalahan sebesar 15%. Jumlah responden yang digunakan dalam penelitian ini sebanyak 30 mahasiswa.
 
-Instrumen penelitian yang digunakan berupa kuesioner dengan beberapa item pertanyaan terkait tingkat kepuasan dan penggunaan layanan keuangan digital. Sebelum dilakukan analisis data, instrumen penelitian diuji terlebih dahulu menggunakan uji validitas dan uji reliabilitas untuk memastikan bahwa kuesioner layak digunakan dalam penelitian.
+Instrumen penelitian yang digunakan berupa kuesioner dengan beberapa item pertanyaan terkait tingkat kepuasan dan penggunaan layanan keuangan digital. Sebelum dilakukan analisis data, instrumen penelitian diuji terlebih dahulu menggunakan uji validitas dan uji reliabilitas untuk memastikan bahwa kuesioner layak digunakan dalam penelitian. 
 
 Pengolahan data dilakukan menggunakan bahasa pemrograman R. Tahapan analisis meliputi penentuan jumlah sampel menggunakan rumus Slovin, uji validitas, dan uji reliabilitas terhadap instrumen penelitian yang digunakan.
 
@@ -50,16 +49,6 @@ hasil <- alpha(data_kuisioner)
 hasil
 hasil$item.stats
 ```
-###	Eliminasi Item Tidak Valid
-Item pertanyaan yang memiliki nilai r.drop kurang dari 0,30 dinyatakan tidak valid dan dieliminasi dari instrumen penelitian agar kualitas instrumen menjadi lebih baik.
-
-```r
-data_baru <- subset(data_kuisioner,
-                    select = -c(P3, P4))
-hasil_baru <- alpha(data_baru)
-hasil_baru
-hasil_baru$item.stats
-```
 ###	Uji Reliabilitas Instrumen Penelitian
 Uji reliabilitas dilakukan untuk mengetahui tingkat konsistensi instrumen penelitian. Pengujian dilakukan menggunakan metode Cronbach’s Alpha untuk melihat apakah kuesioner reliabel atau tidak.
 
@@ -86,32 +75,19 @@ Uji validitas instrumen penelitian dilakukan menggunakan corrected item-total co
 | P9 | 0,70 | Valid |
 | P10 | 0,78 | Valid |
 
-Berdasarkan hasil uji validitas tersebut, dapat diketahui bahwa terdapat dua item yang tidak valid, yaitu item P3 dan P4 karena memiliki nilai r.drop < 0,30. Sementara itu, delapan item lainnya dinyatakan valid karena telah memenuhi kriteria yang ditetapkan, sehingga dapat digunakan dalam analisis selanjutnya.
-### Eliminasi Item Tidak Valid
-Berdasarkan hasil uji validitas menggunakan corrected item-total correlation (r.drop), diketahui bahwa terdapat dua item yang tidak memenuhi kriteria validitas, yaitu P3 dan P4 karena memiliki nilai r.drop < 0,30. Dengan demikian, kedua item tersebut dinyatakan tidak valid dan dieliminasi dari instrumen penelitian agar kualitas instrumen yang digunakan dalam analisis selanjutnya menjadi lebih baik dan memenuhi kriteria pengukuran yang ditetapkan. Setelah dilakukan proses eliminasi tersebut, uji validitas kembali dilakukan menggunakan corrected item-total correlation (r.drop) dengan kriteria pengambilan keputusan bahwa item dinyatakan valid apabila memiliki nilai r.drop ≥ 0,30. Hasil pengujian validitas setelah eliminasi dapat dilihat pada tabel berikut.
-| Item | r.drop | Keterangan |
-|---|---|---|
-| P1 | 0,7745 | Valid |
-| P2 | 0,6944 | Valid |
-| P5 | 0,6399 | Valid |
-| P6 | 0,3086 | Valid |
-| P7 | 0,5037 | Valid |
-| P8 | 0,8111 | Valid |
-| P9 | 0,8324 | Valid |
-| P10 | 0,7754 | Valid |
+Berdasarkan hasil uji validitas tersebut, seluruh item pertanyaan 1 sampai pertanyaan 10 dinyatakan valid karena memiliki nilai r.drop ≥ 0,30. Dengan demikian, tidak terdapat item yang perlu dieliminasi, sehingga seluruh item kuesioner dapat digunakan dalam analisis data selanjutnya.
 
-Berdasarkan hasil uji validitas setelah eliminasi, seluruh item yang tersisa yaitu P1, P2, P5, P6, P7, P8, P9, dan P10 dinyatakan valid karena memiliki nilai r.drop ≥ 0,30, sehingga seluruh item tersebut telah memenuhi kriteria validitas dan dapat digunakan untuk analisis selanjutnya.
 ### Uji Reliabilitas Instrumen Penelitian
 Uji reliabilitas instrumen penelitian dilakukan untuk mengetahui tingkat konsistensi instrumen dalam mengukur variabel penelitian. Pengujian reliabilitas dalam penelitian ini menggunakan Cronbach’s Alpha dengan dasar pengambilan keputusan bahwa instrumen dinyatakan reliabel apabila memiliki nilai Cronbach’s Alpha > 0,70.
 
 Uji reliabilitas dilakukan setelah proses eliminasi item tidak valid, sehingga hanya item yang telah memenuhi kriteria validitas yang digunakan dalam pengujian ini. Hal ini dilakukan agar hasil reliabilitas yang diperoleh mencerminkan kualitas instrumen penelitian secara lebih akurat.
 
-Berdasarkan hasil pengujian, diperoleh nilai Cronbach’s Alpha sebesar 0,8458203. Nilai tersebut menunjukkan bahwa instrumen penelitian memiliki tingkat reliabilitas yang sangat baik, sehingga dapat disimpulkan bahwa instrumen yang digunakan bersifat konsisten dan dapat dipercaya untuk digunakan dalam analisis selanjutnya.
+Berdasarkan hasil pengujian, diperoleh nilai Cronbach’s Alpha sebesar 0,8460946. Nilai tersebut menunjukkan bahwa instrumen penelitian memiliki tingkat reliabilitas yang sangat baik, sehingga dapat disimpulkan bahwa instrumen yang digunakan bersifat konsisten dan dapat dipercaya untuk digunakan dalam analisis selanjutnya.
 
 ## Kesimpulan
-Hasil penentuan jumlah sampel menggunakan rumus Slovin, dengan jumlah populasi sebanyak 1.693 dan tingkat kesalahan sebesar 0,15, diperoleh jumlah sampel penelitian sebanyak 44 responden. Jumlah tersebut kemudian digunakan sebagai dasar pengumpulan data dalam penelitian ini.
+Hasil penentuan jumlah sampel menggunakan rumus Slovin, dengan jumlah populasi sebanyak 1.693 dan tingkat kesalahan sebesar 0,15, diperoleh jumlah sampel penelitian sebanyak 44 responden. Jumlah ini diperoleh sebagai representasi dari populasi yang diteliti sehingga diharapkan mampu memberikan gambaran yang akurat terhadap karakteristik responden. Selanjutnya, jumlah sampel tersebut digunakan sebagai dasar dalam proses pengumpulan data penelitian melalui penyebaran kuesioner kepada mahasiswa FMIPA Universitas Mataram.
 
-Berdasarkan hasil uji validitas instrumen penelitian, diketahui bahwa terdapat dua item yang tidak valid, yaitu P3 dan P4 karena memiliki nilai r.drop < 0,30. Sementara itu, delapan item lainnya dinyatakan valid karena telah memenuhi kriteria r.drop ≥ 0,30. Setelah dilakukan eliminasi terhadap item yang tidak valid, instrumen penelitian yang digunakan hanya terdiri dari item-item yang valid sehingga kualitas pengukuran menjadi lebih baik.
+Berdasarkan hasil uji validitas instrumen penelitian, diketahui bahwa seluruh item pertanyaan dalam kuesioner memiliki nilai r.drop ≥ 0,30 sehingga dapat dinyatakan valid. Hal ini menunjukkan bahwa setiap item pertanyaan mampu mengukur variabel yang diteliti dengan baik dan konsisten. Dengan terpenuhinya kriteria validitas tersebut, maka seluruh item kuesioner layak digunakan dalam analisis data lebih lanjut tanpa perlu dilakukan penghapusan item, sehingga kualitas pengukuran dalam penelitian ini menjadi lebih baik dan dapat dipercaya.
 
-Selanjutnya, hasil uji reliabilitas menunjukkan nilai Cronbach’s Alpha sebesar 0,884732, yang berada di atas batas minimal 0,70. Hal ini menunjukkan bahwa instrumen penelitian memiliki tingkat konsistensi yang sangat baik dalam mengukur variabel penelitian.
+Selanjutnya, hasil uji reliabilitas menunjukkan nilai Cronbach’s Alpha sebesar 0,8460946, yang berada di atas batas minimal 0,70. Hal ini menunjukkan bahwa instrumen penelitian memiliki tingkat konsistensi yang sangat baik dalam mengukur variabel penelitian.
 Dengan demikian, dapat disimpulkan bahwa instrumen penelitian telah memenuhi syarat validitas dan reliabilitas, sehingga layak digunakan untuk analisis data pada tahap selanjutnya sesuai dengan tujuan penelitian.
