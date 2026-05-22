@@ -16,7 +16,7 @@ Penelitian ini bertujuan untuk mengetahui tingkat kepuasan mahasiswa FMIPA Unive
 ## Metode
 Penelitian ini merupakan penelitian kuantitatif dengan pendekatan survei online. Data diperoleh melalui penyebaran kuesioner menggunakan Google Form kepada mahasiswa FMIPA Universitas Mataram mengenai penggunaan layanan keuangan digital, seperti E-Wallet dan Mobile Banking.
 
-Teknik sampling yang digunakan adalah non probability sampling dengan metode convenience sampling, yaitu pengambilan sampel berdasarkan kemudahan dalam memperoleh responden. Penentuan jumlah sampel dilakukan menggunakan rumus Slovin dengan tingkat kesalahan sebesar 15%. Jumlah responden yang digunakan dalam penelitian ini sebanyak 30 mahasiswa.
+Teknik sampling yang digunakan adalah non probability sampling dengan metode convenience sampling, yaitu pengambilan sampel berdasarkan kemudahan dalam memperoleh responden. Penentuan jumlah sampel dilakukan menggunakan rumus Slovin dengan tingkat kesalahan sebesar 15%. Jumlah responden yang digunakan dalam penelitian ini sebanyak 44 mahasiswa.
 
 Instrumen penelitian yang digunakan berupa kuesioner dengan beberapa item pertanyaan terkait tingkat kepuasan dan penggunaan layanan keuangan digital. Sebelum dilakukan analisis data, instrumen penelitian diuji terlebih dahulu menggunakan uji validitas dan uji reliabilitas untuk memastikan bahwa kuesioner layak digunakan dalam penelitian. 
 
